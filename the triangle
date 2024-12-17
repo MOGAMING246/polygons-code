@@ -1,0 +1,26 @@
+import turtle
+
+canva_width = 400
+turtle.screensize(canvwidth=canva_width, canvheight=canva_width, bg="yellow")
+
+alison = turtle.Turtle()
+
+alison.home()
+alison.forward(100)
+alison.left(120)
+alison.forward(100)
+alison.left(120)
+alison.forward(100)
+alison.left(120)
+
+
+
+x_location = alison.xcor()
+y_location = alison.ycor()
+
+if x_location < canva_width and y_location < canva_width:
+    print("I can see Alison")
+else:
+    print("I can't see Alison")
+
+turtle.done()
