@@ -1,0 +1,66 @@
+import turtle
+
+
+screen = turtle.Screen()
+screen.bgcolor("skyblue")
+
+
+pen = turtle.Turtle()
+pen.speed(3)
+
+
+def draw_square(size):
+    for _ in range(4):
+        pen.forward(size)
+        pen.left(90)
+
+
+def draw_triangle(size):
+    for _ in range(3):
+        pen.forward(size)
+        pen.left(120)
+
+
+def draw_circle(radius):
+    pen.penup()
+    pen.forward(30)
+    pen.pendown()
+    pen.circle(radius)
+    pen.penup()
+    pen.backward(30)
+
+
+def draw_rectangle(width, height):
+    for _ in range(2):
+        pen.forward(width)
+        pen.left(90)
+        pen.forward(height)
+        pen.left(90)
+
+
+pen.penup()
+pen.goto(-100, -100)  
+pen.pendown()
+pen.color("brown")
+draw_square(200)
+
+
+pen.penup()
+pen.goto(-120, 100)  
+pen.pendown()
+pen.color("red")
+draw_triangle(240)
+
+
+pen.penup()
+pen.goto(-50, 20)
+pen.pendown()
+pen.color("white")
+draw_circle(20)
+
+
+pen.penup()
+pen.goto(50, 20)
+pen.pendown()
+pen.color("white")
+draw_circle(20)
